@@ -1,6 +1,6 @@
 name: ReverseTrades
 version: '${project.version}'
-main: link.hayhay.reversetrades.ReverseTrades
+main: link.hayhay.PhoenixPlugin.PhoenixPlugin
 api-version: 1.18
 prefix: RevTrade
 authors: [ HayHay, Pixwl ]
