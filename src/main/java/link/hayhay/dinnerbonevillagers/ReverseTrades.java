@@ -1,5 +1,6 @@
-package link.hayhay.PhoenixPlugin;
+package link.hayhay.dinnerbonevillagers;
 
+import org.bukkit.Material;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
@@ -13,17 +14,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class DinnerboneVillager implements Listener {
+public class ReverseTrades implements Listener {
     @EventHandler
     public void onVillagerTrade(PlayerInteractEntityEvent e) {
 
         // Reverses trades for villagers
         if (e.getRightClicked().getType() == EntityType.VILLAGER) {
             Entity entity = e.getRightClicked();
-            Merchant villager = (Merchant) e.getRightClicked();
-            if (!entity.getName().equals("Dinnerbone")) {
+
+            Material getClick = e.getPlayer().getInventory().getItemInMainHand().getType();
+
+            if (!entity.getName().equals("Dinnerbone") && getClick != Material.NAME_TAG) {
                 return;
+            } else if (getClick == Material.NAME_TAG && !e.getRightClicked().getName().equals("Dinnerbone")) {
+                ((Merchant) e.getRightClicked()).getRecipes().forEach((r) -> {
+                    System.out.println("Dropped item");
+                    e.getPlayer().getWorld().dropItemNaturally(e.getRightClicked().getLocation(), r.getIngredients().get(0));
+                });
             }
+
+            Merchant villager = (Merchant) e.getRightClicked();
 
             AtomicInteger index = new AtomicInteger();
 

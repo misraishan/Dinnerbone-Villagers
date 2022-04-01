@@ -1,8 +1,8 @@
-name: ReverseTrades
-version: '1.0-SNAPSHOT'
-main: link.hayhay.reversetrades.ReverseTrades
+name: DinnerboneVillagers
+version: '1.0'
+main: link.hayhay.dinnerbonevillagers.DinnerboneVillagers
 api-version: 1.18
-prefix: RevTrade
+prefix: DV
 authors: [ HayHay ]
 description: Name a villager dinnerbone to reverse it's trades
 website: https://hayhay.link/

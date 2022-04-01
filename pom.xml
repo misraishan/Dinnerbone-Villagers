@@ -5,13 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>link.hayhay</groupId>
-    <artifactId>ReverseTrades</artifactId>
+    <artifactId>DinnerboneVillagers</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>ReverseTrades</name>
+    <name>DinnerboneVillagers</name>
 
-    <description>A plugin to make all of Phoenix's twitter ideas into reality.</description>
+    <description>A plugin to reverse the trades of dinnerboned villagers.</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
