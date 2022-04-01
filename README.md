@@ -1,2 +1,2 @@
-# PhoenixSCPlugin
-A plugin dedicated to all of Phoenix's cursed tweets.
+# Dinnerbone-Villagers
+Villagers drop trades and trades get reversed when dinnerboned.
